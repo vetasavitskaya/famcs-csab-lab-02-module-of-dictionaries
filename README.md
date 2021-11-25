@@ -14,16 +14,6 @@ CREATE TABLE renters (
   PASSPORT_ID VARCHAR(20) NOT NULL UNIQUE,
   DRIVERS_LICENSE VARCHAR(20) NOT NULL UNIQUE
 );
-
-CREATE TABLE rent_contracts (
-  CONTRACT_ID BIGINT PRIMARY KEY,
-  RENTER_ID BIGINT NOT NULL,
-  CAR_NUMBER VARCHAR(10),
-  RENT_STARTING_DATE datetime NOT NULL,
-  RENT_ENDING_DATE datetime NOT NULL,
-  COST DECIMAL(10, 2) NOT NULL,
-  FOREIGN KEY (RENTER_ID) REFERENCES renters(RENTER_ID)
-);
 ```
 ```
 INSERT renters VALUES (1, 'Иванов', 'Иван', 'Иванович', 'Ивановская ул. 1-1, г. Минск', '7637905A001PB1', '000001');
@@ -34,3 +24,14 @@ INSERT renters VALUES (4, 'Васильев', 'Василий', 'Василье�
 
 
 `Rent Contracts`
+```
+CREATE TABLE rent_contracts (
+  CONTRACT_ID BIGINT PRIMARY KEY,
+  RENTER_ID BIGINT NOT NULL,
+  CAR_NUMBER VARCHAR(10),
+  RENT_STARTING_DATE datetime NOT NULL,
+  RENT_ENDING_DATE datetime NOT NULL,
+  COST DECIMAL(10, 2) NOT NULL,
+  FOREIGN KEY (RENTER_ID) REFERENCES renters(RENTER_ID)
+);
+```
