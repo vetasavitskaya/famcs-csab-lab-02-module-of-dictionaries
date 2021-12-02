@@ -1,7 +1,6 @@
 import decimal
 import sys
 from decimal import Decimal
-
 from PyQt5.QtCore import Qt
 from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTableWidget, QHeaderView, QVBoxLayout, QLineEdit, \
     QPushButton, QLabel, QHBoxLayout, QTableWidgetItem, QComboBox, QPlainTextEdit
