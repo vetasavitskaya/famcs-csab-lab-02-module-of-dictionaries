@@ -7,15 +7,6 @@ from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTableWidget, QH
     QPushButton, QLabel, QHBoxLayout, QTableWidgetItem, QComboBox, QPlainTextEdit
 
 
-class AddEditWindow(QWidget):
-    def __init__(self, window_title):
-        super().__init__()
-        self.setWindowTitle(window_title)
-        self.entry_form_layout = QVBoxLayout()
-        self.setFixedSize(628, 280)
-        self.setLayout(self.entry_form_layout)
-
-
 class ContentWindow(QWidget):
     def __init__(self):
         super().__init__()
