@@ -189,7 +189,8 @@ class ContentWindow(QWidget):
             number_string = number_string[1:]
         if number_string.find('.') != -1:
             number_string = number_string[:number_string.find('.')]
-        if number_string[0] == '0' and len(number_string) > 1:
+        if number_string[0] == '0' and len(number_string) > 1 or number_string.find('e') != -1 \
+                or number_string.find('E') != -1:
             return False
         if number_string.find(' ') == -1:
             return True
@@ -221,6 +222,8 @@ class ContentWindow(QWidget):
 
 
     def formatted_number_output(self, calculation_result_):
+        # Целую часть числа обязательно отображать всегда в разбивке пробелами по тысячам, миллионам, миллиардам
+        # в результате вычислений
         calculation_result_string_ = "{:,}".format(calculation_result_)
         if calculation_result_string_.find(".") != -1 and calculation_result_string_[-1] == '0':
             while calculation_result_string_[-1] == '0':
