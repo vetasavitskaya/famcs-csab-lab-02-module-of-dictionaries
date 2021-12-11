@@ -1,4 +1,4 @@
-## Lab 3. Финансовый калькулятор.
+## Lab 4. Финансовый калькулятор
  - desktop приложение на Python и PyQt5 - [famcs_csab_lab_03_financial_calculator.py](https://github.com/vetasavitskaya/famcs-csab-laboratory-works/blob/main/famcs_csab_lab_03_financial_calculator/famcs_csab_lab_03_financial_calculator.py)
  - [exe file](https://drive.google.com/drive/folders/1ln_r9XklnKjlhpMCli5zwsXAZAyX0Oma?usp=sharing)
 ### Тесты
