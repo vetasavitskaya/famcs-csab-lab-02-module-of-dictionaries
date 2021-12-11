@@ -1,3 +1,4 @@
+## Lab 2. Lab 3. Модуль справочников.
 `Python, PyQt5, MS SQL`
 
 Два справочника: Renters и Rent Contracts.
