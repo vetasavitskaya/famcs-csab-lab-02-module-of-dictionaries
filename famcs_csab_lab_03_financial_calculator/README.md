@@ -19,6 +19,6 @@
 
 ![](https://github.com/vetasavitskaya/famcs-csab-laboratory-works/blob/main/famcs_csab_lab_03_financial_calculator/image_2021-12-11_18-32-45.png)
 
-![](https://github.com/vetasavitskaya/famcs-csab-laboratory-works/blob/main/famcs_csab_lab_03_financial_calculator/image_2021-12-11_19-01-45.png)
-
 `986282584876.635029 / (123456.666666 * 987654.777777) / (-8.888888) = -0.909984 округление усечением должно быть 0!`
+
+![](https://github.com/vetasavitskaya/famcs-csab-laboratory-works/blob/main/famcs_csab_lab_03_financial_calculator/image_2021-12-11_19-01-45.png)
