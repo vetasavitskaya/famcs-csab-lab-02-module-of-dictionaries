@@ -1,7 +1,7 @@
-`Python 3.7, PyQt5`
-
-exe file: https://drive.google.com/drive/folders/1ln_r9XklnKjlhpMCli5zwsXAZAyX0Oma?usp=sharing
-### Tests
+## Lab 3. Финансовый калькулятор.
+ - desktop приложение на Python и PyQt5 - [famcs_csab_lab_03_financial_calculator.py](https://github.com/vetasavitskaya/famcs-csab-laboratory-works/blob/main/famcs_csab_lab_03_financial_calculator/famcs_csab_lab_03_financial_calculator.py)
+ - [exe file](https://drive.google.com/drive/folders/1ln_r9XklnKjlhpMCli5zwsXAZAyX0Oma?usp=sharing)
+### Тесты
 
 `123.1 / 1234,566 = 0,099711`
 
