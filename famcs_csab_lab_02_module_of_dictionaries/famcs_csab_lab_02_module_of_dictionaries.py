@@ -88,16 +88,31 @@ class ContentWindow(QWidget):
         self.enter_error.setEnabled(False)
 
         # кнопки
+        self.button_add = QPushButton('add')
+        self.button_add.setFixedSize(200, 28)
+
+        self.button_delete = QPushButton('delete')
+        self.button_delete.setFixedSize(200, 28)
+
+        self.button_edit = QPushButton('edit')
+        self.button_edit.setFixedSize(200, 28)
+
         self.button_quit = QPushButton('exit')  # выход
         self.button_quit.setFixedSize(200, 28)
 
         self.form_layout.addWidget(self.choice_of_the_dictionary)
 
         self.form_layout.setSpacing(9)
+
+        self.form_layout.addWidget(self.button_add)
+        self.form_layout.addWidget(self.button_delete)
+        self.form_layout.addWidget(self.button_edit)
+
         self.form_layout.addWidget(QLabel('Error :'))
         self.form_layout.addWidget(self.enter_error)
 
         self.form_layout.addWidget(self.button_quit)
+
         self.set_table_layout()
 
         self.layout = QHBoxLayout()
