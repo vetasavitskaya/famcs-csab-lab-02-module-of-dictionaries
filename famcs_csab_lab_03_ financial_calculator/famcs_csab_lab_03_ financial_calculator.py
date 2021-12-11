@@ -2,8 +2,8 @@ import decimal
 import sys
 from decimal import Decimal
 from PyQt5.QtCore import Qt
-from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QTableWidget, QHeaderView, QVBoxLayout, QLineEdit, \
-    QPushButton, QLabel, QHBoxLayout, QTableWidgetItem, QComboBox, QPlainTextEdit
+from PyQt5.QtWidgets import QMainWindow, QApplication, QWidget, QVBoxLayout, QLineEdit, \
+    QPushButton, QLabel, QHBoxLayout, QComboBox, QPlainTextEdit
 
 
 class ContentWindow(QWidget):
@@ -219,7 +219,6 @@ class ContentWindow(QWidget):
                 self.calculation_results.clear()
                 self.calculation_results.insertPlainText(previous_result)
 
-
     def formatted_number_output(self, calculation_result_):
         # Целую часть числа обязательно отображать всегда в разбивке пробелами по тысячам, миллионам, миллиардам
         # в результате вычислений
@@ -264,11 +263,17 @@ class ContentWindow(QWidget):
                     value_in_brackets_result = self.operation_switch(second_sign, second_number, third_number)
                     value_in_brackets_result = self.rounding_of_intermediate_operations(value_in_brackets_result)
 
-                    first_operation_result = self.operation_switch(first_sign, first_number, value_in_brackets_result)
-                    first_operation_result = self.rounding_of_intermediate_operations(first_operation_result)
-
-                    third_operation_result = self.operation_switch(third_sign, first_operation_result, fourth_number)
-
+                    if first_sign == '*' or first_sign == '/':
+                        first_operation_result = self.operation_switch(first_sign, first_number, value_in_brackets_result)
+                        first_operation_result = self.rounding_of_intermediate_operations(first_operation_result)
+                        third_operation_result = self.operation_switch(third_sign, first_operation_result,
+                                                                       fourth_number)
+                    else:
+                        third_operation_result = self.operation_switch(third_sign, value_in_brackets_result,
+                                                                       fourth_number)
+                        third_operation_result = self.rounding_of_intermediate_operations(third_operation_result)
+                        third_operation_result = self.operation_switch(first_sign, first_number,
+                                                                       third_operation_result)
                     # В результате вычислений отображать в результате расчетов только шесть знаков после запятой.
                     # Незначащие нули не отображать.
                     self.calculation_result = third_operation_result.quantize(Decimal("1.0000000"))
