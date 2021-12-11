@@ -17,8 +17,7 @@ class ContentWindow(QWidget):
 
         self.setFixedSize(600, 280)
 
-        self.formalization_nonsense = QHBoxLayout()  # В интерфейсе (но не в заголовке) программы обязательно
-        # должны присутствовать: ФИО студента, курс, группа, год. Это написать русскими буквами... вот это вот всё ...((
+        self.formalization_nonsense = QHBoxLayout()
         self.calculation_layout = QHBoxLayout()  # layout для вычислений
         self.calculation_results_layout = QHBoxLayout()  # layout для выбора типа округления
         self.round_type_choice_layout = QHBoxLayout()  # layout для результатов вычислений
