@@ -1,3 +1,5 @@
+`Python 3.7, PyQt5`
+exe file: https://drive.google.com/drive/folders/1ln_r9XklnKjlhpMCli5zwsXAZAyX0Oma?usp=sharing
 ### Tests
 
 `123.1 / 1234,566 = 0,099711`
