@@ -64,13 +64,13 @@ class ContentWindow(QWidget):
         self.calculation_results.setFixedSize(580, 100)
 
         # кнопки
-        self.button_calculate = QPushButton('calculate')  # вычислить
+        self.button_calculate = QPushButton('calculate') 
         self.button_calculate.setFixedSize(90, 28)
 
-        self.button_add_round = QPushButton('add round')  # выход
+        self.button_add_round = QPushButton('add round')
         self.button_add_round.setFixedSize(90, 28)
 
-        self.button_clear = QPushButton('clear')  # выход
+        self.button_clear = QPushButton('clear')
         self.button_clear.setFixedSize(90, 28)
 
         self.button_quit = QPushButton('exit')  # выход
